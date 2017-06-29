@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AdmissionsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Autoeval">
+          <Key>
+            <PropertyRef Name="Student_ID" />
+            <PropertyRef Name="Prog" />
+            <PropertyRef Name="Plan" />
+          </Key>
+          <Property Name="#" Type="smallint" />
+          <Property Name="Student_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="28" />
+          <Property Name="First_Name" Type="varchar" MaxLength="22" />
+          <Property Name="DOBirth" Type="datetime" />
+          <Property Name="AdmTyp" Type="varchar" MaxLength="3" />
+          <Property Name="OUACChoice" Type="varchar" MaxLength="2" />
+          <Property Name="RYEChoice" Type="smallint" />
+          <Property Name="PrevAttPS" Type="varchar" MaxLength="1" />
+          <Property Name="AIDP_Stdnt_Grp" Type="varchar(max)" />
+          <Property Name="Prog" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="Prog_Descr" Type="varchar" MaxLength="29" />
+          <Property Name="Plan" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Plan_Descr" Type="varchar" MaxLength="29" />
+          <Property Name="Full PartTime" Type="varchar" MaxLength="3" />
+          <Property Name="Faculty" Type="varchar" MaxLength="2" />
+          <Property Name="FacultyDescr" Type="varchar" MaxLength="29" />
+          <Property Name="ProgActn" Type="varchar" MaxLength="4" />
+          <Property Name="ActnRsn" Type="smallint" />
+          <Property Name="ActnDt" Type="datetime" />
+          <Property Name="ConfirmDt" Type="datetime" />
+          <Property Name="BOALvl" Type="smallint" />
+          <Property Name="BOAFlag" Type="varchar" MaxLength="41" />
+          <Property Name="BOAInst" Type="varchar" MaxLength="30" />
+          <Property Name="OUACRespCd" Type="smallint" />
+          <Property Name="OUACRespDate" Type="datetime" />
+          <Property Name="OVCAT" Type="smallint" />
+          <Property Name="ACDCT" Type="smallint" />
+          <Property Name="SysRnk" Type="varchar" MaxLength="6" />
+          <Property Name="ManRnk" Type="varchar" MaxLength="6" />
+          <Property Name="RankDt" Type="varchar(max)" />
+          <Property Name="RankO_R" Type="varchar" MaxLength="1" />
+          <Property Name="RankUserID" Type="varchar" MaxLength="1" />
+          <Property Name="RankCom" Type="varchar(max)" />
+          <Property Name="IntAvg" Type="real" />
+          <Property Name="FinalAvg" Type="real" />
+          <Property Name="Comments" Type="varchar" MaxLength="294" />
+          <Property Name="NONAS" Type="varchar(max)" />
+          <Property Name="NONAS_UserID" Type="varchar(max)" />
+          <Property Name="AuthorID" Type="varchar(max)" />
+          <Property Name="NONASCom" Type="varchar(max)" />
+          <Property Name="TOTAL" Type="real" />
+          <Property Name="OSSD" Type="smallint" />
+          <Property Name="EP" Type="smallint" />
+          <Property Name="M6PGR" Type="smallint" />
+          <Property Name="GRDMN" Type="real" />
+          <Property Name="GRDMN_User_ID" Type="varchar" MaxLength="13" />
+          <Property Name="GRDMNCom" Type="varchar" MaxLength="294" />
+          <Property Name="101AcadAvg" Type="real" />
+          <Property Name="Best4Gr11" Type="real" />
+          <Property Name="OvAvgFGr11" Type="real" />
+          <Property Name="Best6FGr12" Type="real" />
+          <Property Name="Best6I_FGr12" Type="real" />
+          <Property Name="Best3I_FGr12" Type="real" />
+          <Property Name="OvAvgI_FGr12" Type="real" />
+          <Property Name="Best6Fw_Pre" Type="real" />
+          <Property Name="Best6Iw_Pre" Type="real" />
+          <Property Name="AvgUsed" Type="varchar" MaxLength="8" />
+          <Property Name="Aud" Type="varchar(max)" />
+          <Property Name="Int_Ses" Type="varchar(max)" />
+          <Property Name="Resume" Type="varchar(max)" />
+          <Property Name="Oth1" Type="varchar(max)" />
+          <Property Name="Ess_State" Type="varchar(max)" />
+          <Property Name="Port" Type="varchar(max)" />
+          <Property Name="Test" Type="varchar(max)" />
+          <Property Name="Oth2" Type="varchar(max)" />
+          <Property Name="ChklstEssayRcAdm" Type="varchar(max)" />
+          <Property Name="Preq1Crse" Type="varchar" MaxLength="5" />
+          <Property Name="Preq1Grd" Type="varchar" MaxLength="3" />
+          <Property Name="Preq1Stat" Type="varchar" MaxLength="1" />
+          <Property Name="Preq2Crse" Type="varchar" MaxLength="5" />
+          <Property Name="Preq2Grd" Type="varchar" MaxLength="3" />
+          <Property Name="Preq2Stat" Type="varchar" MaxLength="1" />
+          <Property Name="Preq2aCrse" Type="varchar(max)" />
+          <Property Name="Preq2aGrd" Type="varchar(max)" />
+          <Property Name="Preq2aStat" Type="varchar(max)" />
+          <Property Name="Preq3Crse" Type="varchar" MaxLength="5" />
+          <Property Name="Preq3Grd" Type="varchar" MaxLength="3" />
+          <Property Name="Preq3Stat" Type="varchar" MaxLength="1" />
+          <Property Name="Preq4Crse" Type="varchar(max)" />
+          <Property Name="Preq4Grd" Type="varchar(max)" />
+          <Property Name="Preq4Stat" Type="varchar(max)" />
+          <Property Name="Preq5Crse" Type="varchar(max)" />
+          <Property Name="Preq5Grd" Type="varchar(max)" />
+          <Property Name="Preq5Stat" Type="varchar(max)" />
+          <Property Name="Prec1Crse" Type="varchar(max)" />
+          <Property Name="Prec1Grd" Type="varchar(max)" />
+          <Property Name="Prec1Stat" Type="varchar(max)" />
+          <Property Name="Prec2Crse" Type="varchar(max)" />
+          <Property Name="Prec2Grd" Type="varchar(max)" />
+          <Property Name="Prec2Stat" Type="varchar(max)" />
+          <Property Name="Prec2aCrse" Type="varchar(max)" />
+          <Property Name="Prec2aGrd" Type="varchar(max)" />
+          <Property Name="Prec2aStat" Type="varchar(max)" />
+          <Property Name="Prec3Crse" Type="varchar(max)" />
+          <Property Name="Prec3Grd" Type="varchar(max)" />
+          <Property Name="Prec3Stat" Type="varchar(max)" />
+          <Property Name="Prec4Crse" Type="varchar(max)" />
+          <Property Name="Prec4Grd" Type="varchar(max)" />
+          <Property Name="Prec4Stat" Type="varchar(max)" />
+          <Property Name="Prec5Crse" Type="varchar(max)" />
+          <Property Name="Prec5Grd" Type="varchar(max)" />
+          <Property Name="Prec5Stat" Type="varchar(max)" />
+          <Property Name="ConCklst" Type="varchar" MaxLength="6" />
+          <Property Name="CklstStat" Type="varchar" MaxLength="1" />
+          <Property Name="DueDt" Type="datetime" />
+          <Property Name="ACADOC_ChecklistStatus" Type="varchar(max)" />
+          <Property Name="ACADOC_ChecklistDate" Type="varchar(max)" />
+          <Property Name="AdmCondCode" Type="varchar" MaxLength="5" />
+          <Property Name="AdmCondComDt" Type="varchar(max)" />
+          <Property Name="AdmCondCom" Type="varchar" MaxLength="215" />
+          <Property Name="Com" Type="varchar(max)" />
+          <Property Name="M_F" Type="varchar" MaxLength="1" />
+          <Property Name="HomeAddr1" Type="varchar" MaxLength="45" />
+          <Property Name="HomeAddr2" Type="varchar" MaxLength="30" />
+          <Property Name="HomeAddr3" Type="varchar" MaxLength="29" />
+          <Property Name="HomeCity" Type="varchar" MaxLength="26" />
+          <Property Name="Prov" Type="varchar" MaxLength="2" />
+          <Property Name="Country" Type="varchar" MaxLength="26" />
+          <Property Name="Career" Type="varchar" MaxLength="4" />
+          <Property Name="Stdnt_Car" Type="smallint" />
+          <Property Name="App#" Type="int" />
+          <Property Name="Prog#" Type="smallint" />
+          <Property Name="MailAddr1" Type="varchar" MaxLength="44" />
+          <Property Name="MailAddr2" Type="varchar" MaxLength="32" />
+          <Property Name="MailAddr3" Type="varchar" MaxLength="29" />
+          <Property Name="Mailing_City" Type="varchar" MaxLength="26" />
+          <Property Name="Mailing_State" Type="varchar" MaxLength="2" />
+          <Property Name="Mailing_Country" Type="varchar" MaxLength="3" />
+          <Property Name="LastSchoAttend101" Type="varchar" MaxLength="30" />
+          <Property Name="LastSchAttendPI" Type="varchar" MaxLength="61" />
+          <Property Name="LastSchPICountry" Type="varchar" MaxLength="41" />
+          <Property Name="EvalStatus" Type="varchar" MaxLength="10" />
+          <Property Name="EvalReason" Type="varchar" MaxLength="2" />
+          <Property Name="AdjCode" Type="smallint" />
+          <Property Name="AborStat" Type="varchar" MaxLength="1" />
+          <Property Name="AborType" Type="smallint" />
+          <Property Name="FirstGen" Type="varchar" MaxLength="1" />
+          <Property Name="FndtnProg" Type="varchar" MaxLength="5" />
+          <Property Name="FndtnPlan" Type="varchar" MaxLength="8" />
+          <Property Name="FndtnBOA" Type="varchar(max)" />
+          <Property Name="PrefEmailAddr" Type="varchar" MaxLength="46" />
+          <Property Name="HomePhone" Type="varchar" MaxLength="21" />
+          <Property Name="MailPhone" Type="varchar" MaxLength="12" />
+          <Property Name="BusnPhone" Type="varchar" MaxLength="12" />
+          <Property Name="CellPhone" Type="varchar" MaxLength="12" />
+          <Property Name="EmailHome" Type="varchar" MaxLength="46" />
+          <Property Name="EmailBusn" Type="varchar" MaxLength="29" />
+          <Property Name="EmailRyer" Type="varchar" MaxLength="31" />
+          <Property Name="EPComments" Type="varchar" MaxLength="31" />
+          <Property Name="Residency" Type="smallint" />
+          <Property Name="ResCountry" Type="varchar" MaxLength="30" />
+          <Property Name="ResTuit" Type="smallint" />
+          <Property Name="FeesAmt" Type="varchar(max)" />
+          <Property Name="FeesDate" Type="varchar(max)" />
+          <Property Name="PymntFlg" Type="varchar" MaxLength="1" />
+          <Property Name="ApplHomePost" Type="varchar" MaxLength="10" />
+          <Property Name="CurrHomePost" Type="varchar" MaxLength="10" />
+          <Property Name="CurrMailPost" Type="varchar" MaxLength="10" />
+          <Property Name="BOAComment" Type="varchar" MaxLength="286" />
+          <Property Name="SpecialConsidReason" Type="varchar(max)" />
+          <Property Name="SpecialConsidAction" Type="varchar(max)" />
+          <Property Name="SpecialConsidDecision" Type="varchar(max)" />
+          <Property Name="ReconsidReason" Type="varchar(max)" />
+          <Property Name="ReconsidAction" Type="varchar(max)" />
+          <Property Name="ReconsidDecision" Type="varchar(max)" />
+          <Property Name="SpecialConsidReq" Type="varchar" MaxLength="1" />
+          <Property Name="ReconsidReq" Type="varchar" MaxLength="1" />
+          <Property Name="SummerReq" Type="varchar" MaxLength="1" />
+          <Property Name="NSSR_LateApp" Type="varchar" MaxLength="1" />
+          <Property Name="NSSR_Mature" Type="varchar" MaxLength="1" />
+          <Property Name="NSSR_Special_Consid" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="AdmissionsDBModelStoreContainer">
+          <EntitySet Name="Autoeval" EntityType="Self.Autoeval" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdmissionsDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AdmissionsDBEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Autoevals" EntityType="AdmissionsDBModel.Autoeval" />
+        </EntityContainer>
+        <EntityType Name="Autoeval">
+          <Key>
+            <PropertyRef Name="Student_ID" />
+            <PropertyRef Name="Prog" />
+            <PropertyRef Name="Plan" />
+          </Key>
+          <Property Name="C_" Type="Int16" />
+          <Property Name="Student_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="28" FixedLength="false" Unicode="false" />
+          <Property Name="First_Name" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="DOBirth" Type="DateTime" Precision="3" />
+          <Property Name="AdmTyp" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="OUACChoice" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="RYEChoice" Type="Int16" />
+          <Property Name="PrevAttPS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="AIDP_Stdnt_Grp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prog" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Prog_Descr" Type="String" MaxLength="29" FixedLength="false" Unicode="false" />
+          <Property Name="Plan" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Plan_Descr" Type="String" MaxLength="29" FixedLength="false" Unicode="false" />
+          <Property Name="Full_PartTime" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Faculty" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="FacultyDescr" Type="String" MaxLength="29" FixedLength="false" Unicode="false" />
+          <Property Name="ProgActn" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ActnRsn" Type="Int16" />
+          <Property Name="ActnDt" Type="DateTime" Precision="3" />
+          <Property Name="ConfirmDt" Type="DateTime" Precision="3" />
+          <Property Name="BOALvl" Type="Int16" />
+          <Property Name="BOAFlag" Type="String" MaxLength="41" FixedLength="false" Unicode="false" />
+          <Property Name="BOAInst" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="OUACRespCd" Type="Int16" />
+          <Property Name="OUACRespDate" Type="DateTime" Precision="3" />
+          <Property Name="OVCAT" Type="Int16" />
+          <Property Name="ACDCT" Type="Int16" />
+          <Property Name="SysRnk" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="ManRnk" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="RankDt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RankO_R" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="RankUserID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="RankCom" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IntAvg" Type="Single" />
+          <Property Name="FinalAvg" Type="Single" />
+          <Property Name="Comments" Type="String" MaxLength="294" FixedLength="false" Unicode="false" />
+          <Property Name="NONAS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NONAS_UserID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AuthorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NONASCom" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TOTAL" Type="Single" />
+          <Property Name="OSSD" Type="Int16" />
+          <Property Name="EP" Type="Int16" />
+          <Property Name="M6PGR" Type="Int16" />
+          <Property Name="GRDMN" Type="Single" />
+          <Property Name="GRDMN_User_ID" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="GRDMNCom" Type="String" MaxLength="294" FixedLength="false" Unicode="false" />
+          <Property Name="C101AcadAvg" Type="Single" />
+          <Property Name="Best4Gr11" Type="Single" />
+          <Property Name="OvAvgFGr11" Type="Single" />
+          <Property Name="Best6FGr12" Type="Single" />
+          <Property Name="Best6I_FGr12" Type="Single" />
+          <Property Name="Best3I_FGr12" Type="Single" />
+          <Property Name="OvAvgI_FGr12" Type="Single" />
+          <Property Name="Best6Fw_Pre" Type="Single" />
+          <Property Name="Best6Iw_Pre" Type="Single" />
+          <Property Name="AvgUsed" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Aud" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Int_Ses" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Oth1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Ess_State" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Port" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Test" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Oth2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ChklstEssayRcAdm" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preq1Crse" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Preq1Grd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Preq1Stat" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Preq2Crse" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Preq2Grd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Preq2Stat" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Preq2aCrse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preq2aGrd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preq2aStat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preq3Crse" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Preq3Grd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Preq3Stat" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Preq4Crse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preq4Grd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preq4Stat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preq5Crse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preq5Grd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Preq5Stat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec1Crse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec1Grd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec1Stat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec2Crse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec2Grd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec2Stat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec2aCrse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec2aGrd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec2aStat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec3Crse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec3Grd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec3Stat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec4Crse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec4Grd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec4Stat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec5Crse" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec5Grd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Prec5Stat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ConCklst" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="CklstStat" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DueDt" Type="DateTime" Precision="3" />
+          <Property Name="ACADOC_ChecklistStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ACADOC_ChecklistDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AdmCondCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="AdmCondComDt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AdmCondCom" Type="String" MaxLength="215" FixedLength="false" Unicode="false" />
+          <Property Name="Com" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="M_F" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="HomeAddr1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="HomeAddr2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="HomeAddr3" Type="String" MaxLength="29" FixedLength="false" Unicode="false" />
+          <Property Name="HomeCity" Type="String" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="Prov" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="Career" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Stdnt_Car" Type="Int16" />
+          <Property Name="App_" Type="Int32" />
+          <Property Name="Prog_" Type="Int16" />
+          <Property Name="MailAddr1" Type="String" MaxLength="44" FixedLength="false" Unicode="false" />
+          <Property Name="MailAddr2" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="MailAddr3" Type="String" MaxLength="29" FixedLength="false" Unicode="false" />
+          <Property Name="Mailing_City" Type="String" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="Mailing_State" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Mailing_Country" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="LastSchoAttend101" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="LastSchAttendPI" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="LastSchPICountry" Type="String" MaxLength="41" FixedLength="false" Unicode="false" />
+          <Property Name="EvalStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EvalReason" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="AdjCode" Type="Int16" />
+          <Property Name="AborStat" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="AborType" Type="Int16" />
+          <Property Name="FirstGen" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FndtnProg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="FndtnPlan" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="FndtnBOA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PrefEmailAddr" Type="String" MaxLength="46" FixedLength="false" Unicode="false" />
+          <Property Name="HomePhone" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+          <Property Name="MailPhone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="BusnPhone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CellPhone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="EmailHome" Type="String" MaxLength="46" FixedLength="false" Unicode="false" />
+          <Property Name="EmailBusn" Type="String" MaxLength="29" FixedLength="false" Unicode="false" />
+          <Property Name="EmailRyer" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+          <Property Name="EPComments" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+          <Property Name="Residency" Type="Int16" />
+          <Property Name="ResCountry" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ResTuit" Type="Int16" />
+          <Property Name="FeesAmt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FeesDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PymntFlg" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ApplHomePost" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CurrHomePost" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CurrMailPost" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BOAComment" Type="String" MaxLength="286" FixedLength="false" Unicode="false" />
+          <Property Name="SpecialConsidReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SpecialConsidAction" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SpecialConsidDecision" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ReconsidReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ReconsidAction" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ReconsidDecision" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SpecialConsidReq" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ReconsidReq" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SummerReq" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NSSR_LateApp" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NSSR_Mature" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NSSR_Special_Consid" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AdmissionsDBModelStoreContainer" CdmEntityContainer="AdmissionsDBEntities" >
+          <EntitySetMapping Name="Autoevals">
+            <EntityTypeMapping TypeName="AdmissionsDBModel.Autoeval">
+              <MappingFragment StoreEntitySet="Autoeval">
+                <ScalarProperty Name="NSSR_Special_Consid" ColumnName="NSSR_Special_Consid" />
+                <ScalarProperty Name="NSSR_Mature" ColumnName="NSSR_Mature" />
+                <ScalarProperty Name="NSSR_LateApp" ColumnName="NSSR_LateApp" />
+                <ScalarProperty Name="SummerReq" ColumnName="SummerReq" />
+                <ScalarProperty Name="ReconsidReq" ColumnName="ReconsidReq" />
+                <ScalarProperty Name="SpecialConsidReq" ColumnName="SpecialConsidReq" />
+                <ScalarProperty Name="ReconsidDecision" ColumnName="ReconsidDecision" />
+                <ScalarProperty Name="ReconsidAction" ColumnName="ReconsidAction" />
+                <ScalarProperty Name="ReconsidReason" ColumnName="ReconsidReason" />
+                <ScalarProperty Name="SpecialConsidDecision" ColumnName="SpecialConsidDecision" />
+                <ScalarProperty Name="SpecialConsidAction" ColumnName="SpecialConsidAction" />
+                <ScalarProperty Name="SpecialConsidReason" ColumnName="SpecialConsidReason" />
+                <ScalarProperty Name="BOAComment" ColumnName="BOAComment" />
+                <ScalarProperty Name="CurrMailPost" ColumnName="CurrMailPost" />
+                <ScalarProperty Name="CurrHomePost" ColumnName="CurrHomePost" />
+                <ScalarProperty Name="ApplHomePost" ColumnName="ApplHomePost" />
+                <ScalarProperty Name="PymntFlg" ColumnName="PymntFlg" />
+                <ScalarProperty Name="FeesDate" ColumnName="FeesDate" />
+                <ScalarProperty Name="FeesAmt" ColumnName="FeesAmt" />
+                <ScalarProperty Name="ResTuit" ColumnName="ResTuit" />
+                <ScalarProperty Name="ResCountry" ColumnName="ResCountry" />
+                <ScalarProperty Name="Residency" ColumnName="Residency" />
+                <ScalarProperty Name="EPComments" ColumnName="EPComments" />
+                <ScalarProperty Name="EmailRyer" ColumnName="EmailRyer" />
+                <ScalarProperty Name="EmailBusn" ColumnName="EmailBusn" />
+                <ScalarProperty Name="EmailHome" ColumnName="EmailHome" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="BusnPhone" ColumnName="BusnPhone" />
+                <ScalarProperty Name="MailPhone" ColumnName="MailPhone" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="PrefEmailAddr" ColumnName="PrefEmailAddr" />
+                <ScalarProperty Name="FndtnBOA" ColumnName="FndtnBOA" />
+                <ScalarProperty Name="FndtnPlan" ColumnName="FndtnPlan" />
+                <ScalarProperty Name="FndtnProg" ColumnName="FndtnProg" />
+                <ScalarProperty Name="FirstGen" ColumnName="FirstGen" />
+                <ScalarProperty Name="AborType" ColumnName="AborType" />
+                <ScalarProperty Name="AborStat" ColumnName="AborStat" />
+                <ScalarProperty Name="AdjCode" ColumnName="AdjCode" />
+                <ScalarProperty Name="EvalReason" ColumnName="EvalReason" />
+                <ScalarProperty Name="EvalStatus" ColumnName="EvalStatus" />
+                <ScalarProperty Name="LastSchPICountry" ColumnName="LastSchPICountry" />
+                <ScalarProperty Name="LastSchAttendPI" ColumnName="LastSchAttendPI" />
+                <ScalarProperty Name="LastSchoAttend101" ColumnName="LastSchoAttend101" />
+                <ScalarProperty Name="Mailing_Country" ColumnName="Mailing_Country" />
+                <ScalarProperty Name="Mailing_State" ColumnName="Mailing_State" />
+                <ScalarProperty Name="Mailing_City" ColumnName="Mailing_City" />
+                <ScalarProperty Name="MailAddr3" ColumnName="MailAddr3" />
+                <ScalarProperty Name="MailAddr2" ColumnName="MailAddr2" />
+                <ScalarProperty Name="MailAddr1" ColumnName="MailAddr1" />
+                <ScalarProperty Name="Prog_" ColumnName="Prog#" />
+                <ScalarProperty Name="App_" ColumnName="App#" />
+                <ScalarProperty Name="Stdnt_Car" ColumnName="Stdnt_Car" />
+                <ScalarProperty Name="Career" ColumnName="Career" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Prov" ColumnName="Prov" />
+                <ScalarProperty Name="HomeCity" ColumnName="HomeCity" />
+                <ScalarProperty Name="HomeAddr3" ColumnName="HomeAddr3" />
+                <ScalarProperty Name="HomeAddr2" ColumnName="HomeAddr2" />
+                <ScalarProperty Name="HomeAddr1" ColumnName="HomeAddr1" />
+                <ScalarProperty Name="M_F" ColumnName="M_F" />
+                <ScalarProperty Name="Com" ColumnName="Com" />
+                <ScalarProperty Name="AdmCondCom" ColumnName="AdmCondCom" />
+                <ScalarProperty Name="AdmCondComDt" ColumnName="AdmCondComDt" />
+                <ScalarProperty Name="AdmCondCode" ColumnName="AdmCondCode" />
+                <ScalarProperty Name="ACADOC_ChecklistDate" ColumnName="ACADOC_ChecklistDate" />
+                <ScalarProperty Name="ACADOC_ChecklistStatus" ColumnName="ACADOC_ChecklistStatus" />
+                <ScalarProperty Name="DueDt" ColumnName="DueDt" />
+                <ScalarProperty Name="CklstStat" ColumnName="CklstStat" />
+                <ScalarProperty Name="ConCklst" ColumnName="ConCklst" />
+                <ScalarProperty Name="Prec5Stat" ColumnName="Prec5Stat" />
+                <ScalarProperty Name="Prec5Grd" ColumnName="Prec5Grd" />
+                <ScalarProperty Name="Prec5Crse" ColumnName="Prec5Crse" />
+                <ScalarProperty Name="Prec4Stat" ColumnName="Prec4Stat" />
+                <ScalarProperty Name="Prec4Grd" ColumnName="Prec4Grd" />
+                <ScalarProperty Name="Prec4Crse" ColumnName="Prec4Crse" />
+                <ScalarProperty Name="Prec3Stat" ColumnName="Prec3Stat" />
+                <ScalarProperty Name="Prec3Grd" ColumnName="Prec3Grd" />
+                <ScalarProperty Name="Prec3Crse" ColumnName="Prec3Crse" />
+                <ScalarProperty Name="Prec2aStat" ColumnName="Prec2aStat" />
+                <ScalarProperty Name="Prec2aGrd" ColumnName="Prec2aGrd" />
+                <ScalarProperty Name="Prec2aCrse" ColumnName="Prec2aCrse" />
+                <ScalarProperty Name="Prec2Stat" ColumnName="Prec2Stat" />
+                <ScalarProperty Name="Prec2Grd" ColumnName="Prec2Grd" />
+                <ScalarProperty Name="Prec2Crse" ColumnName="Prec2Crse" />
+                <ScalarProperty Name="Prec1Stat" ColumnName="Prec1Stat" />
+                <ScalarProperty Name="Prec1Grd" ColumnName="Prec1Grd" />
+                <ScalarProperty Name="Prec1Crse" ColumnName="Prec1Crse" />
+                <ScalarProperty Name="Preq5Stat" ColumnName="Preq5Stat" />
+                <ScalarProperty Name="Preq5Grd" ColumnName="Preq5Grd" />
+                <ScalarProperty Name="Preq5Crse" ColumnName="Preq5Crse" />
+                <ScalarProperty Name="Preq4Stat" ColumnName="Preq4Stat" />
+                <ScalarProperty Name="Preq4Grd" ColumnName="Preq4Grd" />
+                <ScalarProperty Name="Preq4Crse" ColumnName="Preq4Crse" />
+                <ScalarProperty Name="Preq3Stat" ColumnName="Preq3Stat" />
+                <ScalarProperty Name="Preq3Grd" ColumnName="Preq3Grd" />
+                <ScalarProperty Name="Preq3Crse" ColumnName="Preq3Crse" />
+                <ScalarProperty Name="Preq2aStat" ColumnName="Preq2aStat" />
+                <ScalarProperty Name="Preq2aGrd" ColumnName="Preq2aGrd" />
+                <ScalarProperty Name="Preq2aCrse" ColumnName="Preq2aCrse" />
+                <ScalarProperty Name="Preq2Stat" ColumnName="Preq2Stat" />
+                <ScalarProperty Name="Preq2Grd" ColumnName="Preq2Grd" />
+                <ScalarProperty Name="Preq2Crse" ColumnName="Preq2Crse" />
+                <ScalarProperty Name="Preq1Stat" ColumnName="Preq1Stat" />
+                <ScalarProperty Name="Preq1Grd" ColumnName="Preq1Grd" />
+                <ScalarProperty Name="Preq1Crse" ColumnName="Preq1Crse" />
+                <ScalarProperty Name="ChklstEssayRcAdm" ColumnName="ChklstEssayRcAdm" />
+                <ScalarProperty Name="Oth2" ColumnName="Oth2" />
+                <ScalarProperty Name="Test" ColumnName="Test" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="Ess_State" ColumnName="Ess_State" />
+                <ScalarProperty Name="Oth1" ColumnName="Oth1" />
+                <ScalarProperty Name="Resume" ColumnName="Resume" />
+                <ScalarProperty Name="Int_Ses" ColumnName="Int_Ses" />
+                <ScalarProperty Name="Aud" ColumnName="Aud" />
+                <ScalarProperty Name="AvgUsed" ColumnName="AvgUsed" />
+                <ScalarProperty Name="Best6Iw_Pre" ColumnName="Best6Iw_Pre" />
+                <ScalarProperty Name="Best6Fw_Pre" ColumnName="Best6Fw_Pre" />
+                <ScalarProperty Name="OvAvgI_FGr12" ColumnName="OvAvgI_FGr12" />
+                <ScalarProperty Name="Best3I_FGr12" ColumnName="Best3I_FGr12" />
+                <ScalarProperty Name="Best6I_FGr12" ColumnName="Best6I_FGr12" />
+                <ScalarProperty Name="Best6FGr12" ColumnName="Best6FGr12" />
+                <ScalarProperty Name="OvAvgFGr11" ColumnName="OvAvgFGr11" />
+                <ScalarProperty Name="Best4Gr11" ColumnName="Best4Gr11" />
+                <ScalarProperty Name="C101AcadAvg" ColumnName="101AcadAvg" />
+                <ScalarProperty Name="GRDMNCom" ColumnName="GRDMNCom" />
+                <ScalarProperty Name="GRDMN_User_ID" ColumnName="GRDMN_User_ID" />
+                <ScalarProperty Name="GRDMN" ColumnName="GRDMN" />
+                <ScalarProperty Name="M6PGR" ColumnName="M6PGR" />
+                <ScalarProperty Name="EP" ColumnName="EP" />
+                <ScalarProperty Name="OSSD" ColumnName="OSSD" />
+                <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+                <ScalarProperty Name="NONASCom" ColumnName="NONASCom" />
+                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+                <ScalarProperty Name="NONAS_UserID" ColumnName="NONAS_UserID" />
+                <ScalarProperty Name="NONAS" ColumnName="NONAS" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="FinalAvg" ColumnName="FinalAvg" />
+                <ScalarProperty Name="IntAvg" ColumnName="IntAvg" />
+                <ScalarProperty Name="RankCom" ColumnName="RankCom" />
+                <ScalarProperty Name="RankUserID" ColumnName="RankUserID" />
+                <ScalarProperty Name="RankO_R" ColumnName="RankO_R" />
+                <ScalarProperty Name="RankDt" ColumnName="RankDt" />
+                <ScalarProperty Name="ManRnk" ColumnName="ManRnk" />
+                <ScalarProperty Name="SysRnk" ColumnName="SysRnk" />
+                <ScalarProperty Name="ACDCT" ColumnName="ACDCT" />
+                <ScalarProperty Name="OVCAT" ColumnName="OVCAT" />
+                <ScalarProperty Name="OUACRespDate" ColumnName="OUACRespDate" />
+                <ScalarProperty Name="OUACRespCd" ColumnName="OUACRespCd" />
+                <ScalarProperty Name="BOAInst" ColumnName="BOAInst" />
+                <ScalarProperty Name="BOAFlag" ColumnName="BOAFlag" />
+                <ScalarProperty Name="BOALvl" ColumnName="BOALvl" />
+                <ScalarProperty Name="ConfirmDt" ColumnName="ConfirmDt" />
+                <ScalarProperty Name="ActnDt" ColumnName="ActnDt" />
+                <ScalarProperty Name="ActnRsn" ColumnName="ActnRsn" />
+                <ScalarProperty Name="ProgActn" ColumnName="ProgActn" />
+                <ScalarProperty Name="FacultyDescr" ColumnName="FacultyDescr" />
+                <ScalarProperty Name="Faculty" ColumnName="Faculty" />
+                <ScalarProperty Name="Full_PartTime" ColumnName="Full PartTime" />
+                <ScalarProperty Name="Plan_Descr" ColumnName="Plan_Descr" />
+                <ScalarProperty Name="Plan" ColumnName="Plan" />
+                <ScalarProperty Name="Prog_Descr" ColumnName="Prog_Descr" />
+                <ScalarProperty Name="Prog" ColumnName="Prog" />
+                <ScalarProperty Name="AIDP_Stdnt_Grp" ColumnName="AIDP_Stdnt_Grp" />
+                <ScalarProperty Name="PrevAttPS" ColumnName="PrevAttPS" />
+                <ScalarProperty Name="RYEChoice" ColumnName="RYEChoice" />
+                <ScalarProperty Name="OUACChoice" ColumnName="OUACChoice" />
+                <ScalarProperty Name="AdmTyp" ColumnName="AdmTyp" />
+                <ScalarProperty Name="DOBirth" ColumnName="DOBirth" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+                <ScalarProperty Name="C_" ColumnName="#" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
